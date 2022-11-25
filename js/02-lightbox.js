@@ -5,7 +5,7 @@ const galleryList = document.querySelector(".gallery");
 const galleryItemsMarkup = galleryItems
   .map(
     (img) =>
-      `<div class="gallery__item">
+      `<li class="gallery__item">
       <a class="gallery__link" href=${img.original}>
       <img
       class="gallery__image"
@@ -13,7 +13,7 @@ const galleryItemsMarkup = galleryItems
       alt=${img.description}
     />
     </a>
-    </div>`
+    </li>`
   )
   .join("");
 galleryList.insertAdjacentHTML("afterbegin", galleryItemsMarkup);
